@@ -1,0 +1,40 @@
+server:
+  port: 8081
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/crud-library
+    username: postgres
+    password: camal123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 1057135930964-vd4pk6q14s4a8gk4nprrb81rg0q221j5.apps.googleusercontent.com
+            client-secret: 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
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: camallaoyrenin@gmail.com
+    password: qmfn ahut wauv yrtt
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  application:
+    name: crud-library
