@@ -8,7 +8,6 @@ import com.example.crudlibrary.model.entity.UserRefreshToken;
 import com.example.crudlibrary.repository.RefreshTokenRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 

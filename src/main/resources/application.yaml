@@ -38,3 +38,6 @@ spring:
 
   application:
     name: crud-library
+  app:
+    jwt:
+      secret: $(Z+dBPwIYuQofRky/UvjciFnywmv97fzKCzS5Y3rHJjiLGWuvdtXa6EX7FVF8wbrc)
