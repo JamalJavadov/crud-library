@@ -26,4 +26,12 @@ public class UserService {
         return userMapper.toDto(user);
     }
 
+    public void delete(String email){
+        userRepository.deleteByEmail(email);
+    }
+    public void safeDelete(String email){
+        User user = userRepository.findByEmail(email).orElseThrow();
+        user.setDeleted(true);
+        userRepository.save(user);
+    }
 }

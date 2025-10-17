@@ -28,5 +28,14 @@ public class UserController {
         return ResponseEntity.ok(userService.profile(authentication.getName()));
     }
 
+    @DeleteMapping("/delete")
+    public void delete(@RequestParam String email){
+        userService.delete(email);
+    }
+
+    @DeleteMapping("/safe-delete")
+    public void safeDelete(@RequestParam String email){
+        userService.safeDelete(email);
+    }
 
 }

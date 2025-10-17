@@ -35,30 +35,4 @@ public class UserAuthenticationController {
         return ResponseEntity.ok(authenticationService.verifyCode(authCodeVerfication));
     }
 
-//    @PreAuthorize("hasRole('USER')")
-//    @PostMapping("/refresh-token")
-//    public ResponseEntity<?> refreshToken(@RequestBody TokenRefreshRequestDto tokenRefresh){
-//        return refreshTokenRepository.findRefreshTokenByToken(tokenRefresh.getRefreshToken())
-//                .map(token->{
-//                    if (refreshTokenService.isExpired(token)){
-//                        refreshTokenRepository.delete(token);
-//                        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Refresh token expired. Please log in again.");
-//                    }
-//                    User user = token.getUser();
-//                    String newAccessToken = jwtService.generatedToken(user);
-//                    return ResponseEntity.ok(new TokenRefreshResponseDto(newAccessToken,token.getToken()));
-//
-//                })
-//                .orElseGet(()->ResponseEntity.status(HttpStatus.NOT_FOUND).body("Refresh Token Not Found"));
-//    }
-
-//
-//    @PostMapping("/logout")
-//    public ResponseEntity<?> logout(@RequestBody TokenRefreshRequestDto tokenRefreshRequestDto){
-//        return refreshTokenRepository.findRefreshTokenByToken(tokenRefreshRequestDto.getRefreshToken())
-//                .map(refreshToken -> {
-//                    refreshTokenService.deleteByUser(refreshToken.getUser());
-//                    return ResponseEntity.ok("User logged out successfully");
-//                }).orElseGet(()->ResponseEntity.status(HttpStatus.NOT_FOUND).body("Refresh Token Not Found"));
-//    }
 }

@@ -40,6 +40,11 @@ public class User  implements UserDetails {
     @Column(name = "image_path")
     private String imagePath;
 
+    private boolean deleted = false;
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
